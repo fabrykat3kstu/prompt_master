@@ -416,7 +416,7 @@ export default function App() {
         {/* Sidebar Nav (visible only on desktop md:flex) */}
         <aside className="hidden md:flex flex-col w-64 bg-white border-r border-slate-200 shrink-0 p-6 space-y-8 select-none">
           <div className="space-y-1.5">
-            <span className="text-[9px] font-extrabold tracking-widest text-slate-400 uppercase px-3">Główne panele</span>
+            <span className="text-[9px] font-extrabold tracking-widest text-slate-400 uppercase px-3">Główne moduły</span>
             
             <button 
               onClick={() => { setActiveTab("explore"); setSearchQuery(""); }}
@@ -447,7 +447,7 @@ export default function App() {
           </div>
 
           <div className="pt-4 border-t border-slate-150">
-            <span className="text-[9px] font-extrabold tracking-widest text-slate-400 uppercase px-3 block mb-3">Statystyki Agencji</span>
+            <span className="text-[9px] font-extrabold tracking-widest text-slate-400 uppercase px-3 block mb-3">Statystyki</span>
             <div className="bg-[#F8FAFC] rounded-2xl p-4 space-y-3 border border-slate-200 custom-shadow mb-4">
               <div className="flex justify-between items-center text-xs">
                 <span className="text-slate-500">Razem instrukcji dla AI:</span>
