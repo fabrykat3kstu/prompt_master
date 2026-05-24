@@ -521,7 +521,7 @@ export default function App() {
                   <span className="text-[10px] font-extrabold tracking-widest text-slate-400 uppercase text-left block">
                     Obszary kompetencyjne
                   </span>
-                  <div className="flex gap-2.5 overflow-x-auto pb-3 pt-1 scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
+                  <div className="flex flex-wrap gap-2 md:gap-2.5 py-1.5">
                     {CATEGORIES.map(cat => {
                       const CatIcon = IconMap[cat.icon] || Code;
                       const isActive = selectedCategory === cat.id;
