@@ -27,7 +27,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     id: "academic",
-    name: "Badania i doktorat",
+    name: "Badania naukowe",
     icon: "GraduationCap",
     description: "Wsparcie prac dyplomowych i doktoratów: symulowanie badań własnych, statystyki i styl akademicki."
   },
@@ -86,7 +86,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "strategy",
     title: "Optymalizacja procesów w agencji marketingowej",
     description: "Szczegółowa analiza wąskich gardeł operacyjnych w agencjach usługowych oraz ich automatyzacja No-Code.",
-    prompt: "Jesteś ekspertem ds. operacji i skalowania agencji usługowych. Prowadzę agencję marketingową. Moim celem jest zwiększenie marży i zaoszczędzenie czasu bez utraty jakości realizowanych usług.\n\nOto jak obecnie wygląda mój proces (od leada do oddania projektu): [OPISZ SWÓJ PROCES]\n\nZadanie:\n1. Wskaż 3 największe wąskie gardła.\n2. Zaproponuj konkretne narzędzia AI/No-Code do automatyzacji.\n3. Podaj schemat idealnego lejka operacyjnego.",
+    prompt: "Jesteś ekspertem ds. operacji i skalowania agencji usługowych. Prowadzę agencję marketingową. Moim celem jest zwiększenie marży i zaoszczędzenie czasu bez utraty jakości realizowanych usług.\n\nOto jak obecnie wygląda mój proces (od leada do oddania projektu): [opis obecnego procesu]\n\nZadanie:\n1. Wskaż 3 największe wąskie gardła.\n2. Zaproponuj konkretne narzędzia AI/No-Code do automatyzacji.\n3. Podaj schemat idealnego lejka operacyjnego.",
     tip: "Idealnie sprawdza się w parze z automatyzacją procesu zbierania briefów od nowych klientów."
   },
   {
@@ -94,7 +94,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "strategy",
     title: "Bezlitosna analiza konkurencji",
     description: "Agresywny research konkurentów i odnajdywanie luk w ich ofercie, które możesz spieniężyć.",
-    prompt: "Jesteś analitykiem rynkowym. Przeanalizuj konkurenta: [NAZWA/LINK]. Zidentyfikuj ich główne UVP, 3 słabości operacyjne oraz lukę na rynku, którą mogę wypełnić lepszą ofertą.",
+    prompt: "Jesteś analitykiem rynkowym. Przeanalizuj konkurenta: [nazwa lub link konkurenta]. Zidentyfikuj ich główne UVP, 3 słabości operacyjne oraz lukę na rynku, którą mogę wypełnić lepszą ofertą.",
     tip: "Wklej bezpośrednią treść podstrony 'O nas' lub 'Oferta' konkurenta w celu uzyskania unikalnej opinii rynkowej."
   },
   {
@@ -110,7 +110,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "strategy",
     title: "Strategia pivotu biznesowego",
     description: "Szybka, bezawaryjna reorientacja operacyjna przy spadku sprzedaży danego produktu.",
-    prompt: "Mój produkt [NAZWA] nie sprzedaje się tak jak zakładałem. Główne obiekcje to: [LISTA].\n\nWciel się w rolę stratega i zaproponuj strategię Pivotu:\n1. Nowe opakowanie wiedzy.\n2. Komunikacja zmiany do społeczności.\n3. 3 małe testy MVP na ten tydzień.",
+    prompt: "Mój produkt [nazwa produktu] nie sprzedaje się tak jak zakładałem. Główne obiekcje to: [lista obiekcji klientów].\n\nWciel się w rolę stratega i zaproponuj strategię Pivotu:\n1. Nowe opakowanie wiedzy.\n2. Komunikacja zmiany do społeczności.\n3. 3 małe testy MVP na ten tydzień.",
     tip: "Większość porażek sprzedażowych wynika ze złej komunikacji, a nie złej jakości samego produktu."
   },
 
@@ -120,7 +120,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "marketing",
     title: "Zrozumienie niszy i odbiorców",
     description: "Wielopoziomowa psychologiczna analiza odbiorcy. odkrywa rzeczywiste motywatory zakupowe.",
-    prompt: "Zachowuj się jak ekspert strategii social media. Przeanalizuj niszę [WSTAW NISZĘ] i zidentyfikuj:\n- Kim jest idealny odbiorca\n- Problemy, z którymi się zmaga\n- Emocje, które kierują jego decyzjami\n- Treści, które konsumuje codziennie\n- Co sprawia, że zaczyna obserwować, angażować się i kupować\nPodsumuj wszystko w jasnym profilu odbiorcy, abym mógł tworzyć treści, które faktycznie działają.",
+    prompt: "Zachowuj się jak ekspert strategii social media. Przeanalizuj niszę [nazwa niszy] i zidentyfikuj:\n- Kim jest idealny odbiorca\n- Problemy, z którymi się zmaga\n- Emocje, które kierują jego decyzjami\n- Treści, które konsumuje codziennie\n- Co sprawia, że zaczyna obserwować, angażować się i kupować\nPodsumuj wszystko w jasnym profilu odbiorcy, abym mógł tworzyć treści, które faktycznie działają.",
     tip: "Zastosuj te analizy do stworzenia person komunikacyjnych przed startem nowej kampanii."
   },
   {
@@ -128,7 +128,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "marketing",
     title: "Twórca wiralowych haczyków",
     description: "Zbiór 50 niezawodnych wzorów nagłówków blokujących scrollowanie użytkownika.",
-    prompt: "Zachowuj się jak copywriter, który pisze posty zdobywające miliony wyświetleń. Przeanalizuj wiralowe treści w niszy [WSTAW NISZĘ] i stwórz 50 szablonów haczyków (hooków), które mogę szybko dostosować. Pogrupuj je w kategorie: Ciekawość, Kontrowersja, Oparte na historii, Listy, Odważne twierdzenia. Spraw, aby każdy haczyk był krótki, jasny i zatrzymywał scrollowanie.",
+    prompt: "Zachowuj się jak copywriter, który pisze posty zdobywające miliony wyświetleń. Przeanalizuj wiralowe treści w niszy [nazwa niszy] i stwórz 50 szablonów haczyków (hooków), które mogę szybko dostosować. Pogrupuj je w kategorie: Ciekawość, Kontrowersja, Oparte na historii, Listy, Odważne twierdzenia. Spraw, aby każdy haczyk był krótki, jasny i zatrzymywał scrollowanie.",
     tip: "Wykorzystaj je jako alternatywy na początku nagrań wideo (Reels/Shorts)."
   },
   {
@@ -136,7 +136,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "marketing",
     title: "Kalendarz treści Instagram na 30 dni",
     description: "Kompletny, zrównoważony plan z harmonogramem na edukację, viral oraz szybką sprzedaż.",
-    prompt: "Stwórz miesięczną strategię treści, która pomoże mi zdobyć [liczba celu] nowych idealnych obserwujących do [data]. Mój Instagram dotyczy [niszy] i pomagam [grupa docelowa] [cel] za pomocą [oferta]. Podziel strategię na tygodnie. Dodaj konkretne przykłady hooków dla każdego posta.",
+    prompt: "Stwórz miesięczną strategię treści, która pomoże mi zdobyć [liczba docelowa obserwujących] nowych idealnych obserwujących do [data zakończenia kampanii]. Mój Instagram dotyczy [nisza tematyczna] i pomagam [grupa docelowa] [cel do osiągnięcia] za pomocą [oferowana usługa lub produkt]. Podziel strategię na tygodnie. Dodaj konkretne przykłady hooków dla każdego posta.",
     tip: "Przeplataj posty eksperckie o dużej wartości zapisywalnej z szybkimi, powtarzalnymi Reelsami."
   },
   {
@@ -144,7 +144,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "marketing",
     title: "Analiza SEO słów kluczowych",
     description: "Identyfikuje intencje rynkowe użytkowników i dzieli frazy na odpowiednie ścieżki.",
-    prompt: "Wypisz 15 słów kluczowych, których [docelowa grupa odbiorców] używa do wyszukiwania sposobów na [cel]. Podziel frazy na: Informacyjne, Transakcyjne i Nawigacyjne. Zaproponuj 5 tytułów na bloga.",
+    prompt: "Wypisz 15 słów kluczowych, których [grupa docelowa] używa do wyszukiwania sposobów na [potrzeba lub cel odbiorców]. Podziel frazy na: Informacyjne, Transakcyjne i Nawigacyjne. Zaproponuj 5 tytułów na bloga.",
     tip: "Doskonale chroni przed marnowaniem budżetu reklamowego na niedopasowane intencje."
   },
   {
@@ -152,7 +152,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "marketing",
     title: "Angażująca burza mózgów",
     description: "Kreowanie niesztampowych, mocno komentowanych pomysłów wyłamujących się z powtarzalnych schematów.",
-    prompt: "Szukam 10 pomysłów na zasięgowe treści na Instagram. Celem jest zwiększenie zaangażowania i wyświetleń. Myśl nieszablonowo! Prowadzę [Twój biznes]. Dla każdego pomysłu podaj: hook, opis formatu i emocję, w którą uderzamy.",
+    prompt: "Szukam 10 pomysłów na zasięgowe treści na Instagram. Celem jest zwiększenie zaangażowania i wyświetleń. Myśl nieszablonowo! Prowadzę [nazwa i rodzaj mojego biznesu]. Dla każdego pomysłu podaj: hook, opis formatu i emocję, w którą uderzamy.",
     tip: "Użytkownicy uwielbiają narrację ukazującą ludzką stronę Twoich porażek i drogi do wniosków."
   },
   {
@@ -168,7 +168,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "marketing",
     title: "Inżynieria wsteczna virali",
     description: "Dezawuuje sukces viralowych postów konkurencji i tworzy z nich uniwersalny schemat pisania.",
-    prompt: "Jesteś analitykiem treści. Wykonaj inżynierię wsteczną posta: [WKLEJ TREŚĆ]. Przeanalizuj strukturę hooka, styl, słownictwo i psychologię (FOMO, curiosity gap). Stwórz gotowy do skopiowania prompt na bazie tej analizy.",
+    prompt: "Jesteś analitykiem treści. Wykonaj inżynierię wsteczną posta: [treść analizowanego posta]. Przeanalizuj strukturę hooka, styl, słownictwo i psychologię (FOMO, curiosity gap). Stwórz gotowy do skopiowania prompt na bazie tej analizy.",
     tip: "Pozostawia strukturę nienaruszoną, uzbrajając Cię w uniwersalny mechanizm przyciągający uwagę."
   },
   {
@@ -176,7 +176,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "marketing",
     title: "Zabójczy cold email B2B",
     description: "Wzorzec nieformalnej, zwięzłej wiadomości do kluczowych decydentów o wysokiej responsywności.",
-    prompt: "Jesteś elitarnym copywriterem B2B. Napisz dla mnie szablon wiadomości Cold Email do [Stanowisko]. Zasady: Max 5 zdań, zacznij od NICH, podaj Social Proof, użyj Soft CTA.",
+    prompt: "Jesteś elitarnym copywriterem B2B. Napisz dla mnie szablon wiadomości Cold Email do [stanowisko decydenta]. Zasady: Max 5 zdań, zacznij od NICH, podaj Social Proof, użyj Soft CTA.",
     tip: "Nigdy nie załączaj oferty PDF w pierwszej wiadomości – dąż najpierw do uzyskania odpowiedzi."
   },
 
@@ -236,7 +236,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "seo",
     title: "Strategiczny audyt SEO 360",
     description: "Techniczno-treściowy audyt serwisu o wysokim zaawansowaniu, dający gotowe zadania wdrożeniowe.",
-    prompt: "Wykonaj kompleksowy audyt SEO strony: [URL]. Branża: [WPISZ]. Rynek: [WPISZ]. Cel biznesowy: [sprzedaż / leady / content].\nAudyt podziel na sekcje:\n1. Audyt techniczny (statusy 200/301/404, robots, schema, Vitals, mobile usability).\n2. Audyt on-page (title, meta, nagłówki H1-H6, E-E-A-T, ALT).\n3. Audyt contentowy (intencje wyszukiwania, Topical Authority).\n4. Audyt off-site (linki).\n5. Analiza konkurencji.\n6. Rekomendacje (Quick wins, strategia 6 m-cy).\nWyniki przedstaw z priorytetami High/Medium/Low.",
+    prompt: "Wykonaj kompleksowy audyt SEO strony: [adres URL strony]. Branża: [branża]. Rynek: [docelowy rynek]. Cel biznesowy: [główny cel biznesowy strony].\nAudyt podziel na sekcje:\n1. Audyt techniczny (statusy 200/301/404, robots, schema, Vitals, mobile usability).\n2. Audyt on-page (title, meta, nagłówki H1-H6, E-E-A-T, ALT).\n3. Audyt contentowy (intencje wyszukiwania, Topical Authority).\n4. Audyt off-site (linki).\n5. Analiza konkurencji.\n6. Rekomendacje (Quick wins, strategia 6 m-cy).\nWyniki przedstaw z priorytetami High/Medium/Low.",
     tip: "Niezbędny materiał przy tworzeniu rzetelnych wycen dla nowych, wymagających klientów."
   },
   {
@@ -244,7 +244,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "seo",
     title: "Audyt WCAG 2.2 AA (techniczny)",
     description: "Analizuje kod, skupienie (focus), dostępność klawiatury oraz reguły czytników ekranowych.",
-    prompt: "Wykonaj szczegółowy audyt dostępności cyfrowej strony [URL] zgodnie z WCAG 2.2 AA. Oceń zgodność w podziale na: \n1. Percepcja (kontrast, ALT, napisy, skalowalność 200%).\n2. Funkcjonalność (klawiatura, focus, ARIA roles, pułapki klaw.).\n3. Zrozumiałość (język, błędy).\n4. Solidność (semantyka, czytniki).\nW raporcie podaj naruszenia, priorytet, ryzyko prawne i checklistę dla developera.",
+    prompt: "Wykonaj szczegółowy audyt dostępności cyfrowej strony [adres URL strony] zgodnie z WCAG 2.2 AA. Oceń zgodność w podziale na: \n1. Percepcja (kontrast, ALT, napisy, skalowalność 200%).\n2. Funkcjonalność (klawiatura, focus, ARIA roles, pułapki klaw.).\n3. Zrozumiałość (język, błędy).\n4. Solidność (semantyka, czytniki).\nW raporcie podaj naruszenia, priorytet, ryzyko prawne i checklistę dla developera.",
     tip: "Kluczowy etap audytów dla podmiotów publicznych i medycznych."
   },
   {
@@ -252,7 +252,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "seo",
     title: "Dostępność cyfrowa - legal compliance",
     description: "Audyt zgodności w świetle EAA (European Accessibility Act) i polskiego prawa.",
-    prompt: "Przygotuj audyt dostępności cyfrowej strony [URL] w kontekście zgodności z WCAG 2.2, European Accessibility Act oraz ustawą o dostępności cyfrowej. Oceń ryzyko sankcji, barier UX i wpływ na SEO. Uwzględnij executive summary dla zarządu, listę barier, roadmapę (30/90/180 dni) i deklarację dostępności.",
+    prompt: "Przygotuj audyt dostępności cyfrowej strony [adres URL strony] w kontekście zgodności z WCAG 2.2, European Accessibility Act oraz ustawą o dostępności cyfrowej. Oceń ryzyko sankcji, barier UX i wpływ na SEO. Uwzględnij executive summary dla zarządu, listę barier, roadmapę (30/90/180 dni) i deklarację dostępności.",
     tip: "Od czerwca 2025 roku kary za brak dostępności dotkną również sektor prywatny (SaaS, E-sklepy)."
   },
 
@@ -262,7 +262,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "academic",
     title: "Precyzyjne opracowanie badań sondażowych",
     description: "Generuje cały rozdział badawczy (Rozdział IV) na podstawie kwestionariusza ankiety w bezbłędnej nomenklaturze naukowej.",
-    prompt: "Opracuj wyniki badań sondażowych przeprowadzonych techniką ankiety przy użyciu kwestionariusza ankiety jako narzędzia badawczego. Opracowanie przygotuj na podstawie dostarczonych danych [plik PDF lub XML]. Dla każdego pytania z osobna przygotuj opracowanie według schematu:\n\n1. Tytuł: Wykres [numer]. Odpowiedzi na pytanie nr [numer] - [Treść pytania].\n2. Podpis: 'Źródło: Opracowanie własne na podstawie przeprowadzonych badań.'.\n3. Analiza opisowa: Tekst w stylu akademickim i naukowym interpretujący dane z kwestionariusza. Wzoruj się na przykładzie: 'Pod względem poziomu wykształcenia w badanej grupie respondentów dominowały osoby posiadające dyplom studiów licencjackich lub inżynierskich (30,5%). 23,2% respondentów to studenci studiów magisterskich. 22,1% respondentów studiuje na studiach I stopnia. Z kolei 20% badanych posiada dyplom magistra. Nieznaczna liczba badanych posiada wykształcenie średnie.'.\n\nDbaj o rygorystyczny styl naukowy, płynność narracji, poprawne zaokrąglenia procentowe oraz precyzyjne wnioskowanie statystyczne.\n\nStruktura rozdziału:\nRozdział IV: Wyniki badań własnych i ich analiza\n4.1. Charakterystyka społeczno-demograficzna próby badawczej (metryczka kwestionariusza)\n4.2. Analiza wyników badania sondażowego (interpretacja poszczególnych pytań kwestionariusza)\n4.3. Wnioski z badań i rekomendacje naukowe\n\nW tym rozdziale przedstaw naukowe wnioski z analizy kwestionariusza. Na początku podaj metodologię: cel, technikę badania (ankieta) i zastosowane narzędzie badawcze (kwestionariusz ankiety). Następnie przedstaw interpretację zebranych danych empirycznych oraz wskaż weryfikację hipotez badawczych i własne wnioski zbieżne z tematyką pracy naukowej.\n\nZałożenia metodologiczne dla badań własnych (odnieś się we wnioskach i rekomendacjach): [metodologia].",
+    prompt: "Opracuj wyniki badań sondażowych przeprowadzonych techniką ankiety przy użyciu kwestionariusza ankiety jako narzędzia badawczego. Opracowanie przygotuj na podstawie dostarczonych danych [plik PDF lub XML]. Dla każdego pytania z osobna przygotuj opracowanie według schematu:\n\n1. Tytuł: Wykres [numer]. Odpowiedzi na pytanie nr [numer] - [Treść pytania].\n2. Podpis: 'Źródło: Opracowanie własne na podstawie przeprowadzonych badań.'.\n3. Analiza opisowa: Tekst w stylu akademickim i naukowym interpretujący dane z kwestionariusza. Wzoruj się na przykładzie: 'Pod względem poziomu wykształcenia w badanej grupie respondentów dominowały osoby posiadające dyplom studiów licencjackich lub inżynierskich (30,5%). 23,2% respondentów to studentenci studiów magisterskich. 22,1% respondentów studiuje na studiach I stopnia. Z kolei 20% badanych posiada dyplom magistra. Nieznaczna liczba badanych posiada wykształcenie średnie.'.\n\nDbaj o rygorystyczny styl naukowy, płynność narracji, poprawne zaokrąglenia procentowe oraz precyzyjne wnioskowanie statystyczne.\n\nStruktura rozdziału:\nRozdział IV: Wyniki badań własnych i ich analiza\n4.1. Charakterystyka społeczno-demograficzna próby badawczej (metryczka kwestionariusza)\n4.2. Analiza wyników badania sondażowego (interpretacja poszczególnych pytań kwestionariusza)\n4.3. Wnioski z badań i rekomendacje naukowe\n\nW tym rozdziale przedstaw naukowe wnioski z analizy kwestionariusza. Na początku podaj metodologię: cel, technikę badania (ankieta) i zastosowane narzędzie badawcze (kwestionariusz ankiety). Następnie przedstaw interpretację zebranych danych empirycznych oraz wskaż weryfikację hipotez badawczych i własne wnioski zbieżne z tematyką pracy naukowej.\n\nZałożenia metodologiczne dla badań własnych (odnieś się we wnioskach i rekomendacjach): [metodologia].",
     tip: "Przeklej surowe dane z kwestionariusza ankiety (np. Excel, PDF lub XML), aby wygenerować profesjonalną analizę opisową do pracy dyplomowej."
   },
   {
@@ -270,7 +270,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "academic",
     title: "Symulacja statystyczna badań",
     description: "Projektuje ankietę Likerta, metryczki i tabelaryczny rozkład próby na 50+ respondentów.",
-    prompt: "Zasymuluj przeprowadzenie badań własnych na temat [TEMAT]. Skorzystaj z metody sondażu i techniki ankiety online. Opracuj: \n1. Kwestionariusz (metryczka: służba, staż, płeć, wiek + 15 pytań skala Likerta).\n2. Charakterystyka próby (tabele rozkładu dla 50 respondentów + opis akademicki).\n3. Analiza pytań zasadniczych (osobne tabele dla każdego pytania + interpretacja).\n4. Wnioski i rekomendacje (weryfikacja hipotez).\nZachowaj rygorystyczny styl naukowy.",
+    prompt: "Zasymuluj przeprowadzenie badań własnych na temat [temat badania]. Skorzystaj z metody sondażu i techniki ankiety online. Opracuj: \n1. Kwestionariusz (metryczka: służba, staż, płeć, wiek + 15 pytań skala Likerta).\n2. Charakterystyka próby (tabele rozkładu dla 50 respondentów + opis akademicki).\n3. Analiza pytań zasadniczych (osobne tabele dla każdego pytania + interpretacja).\n4. Wnioski i rekomendacje (weryfikacja hipotez).\nZachowaj rygorystyczny styl naukowy.",
     tip: "Pomoże ugruntować wstępne hipotezy badawcze przed prawdziwym pilotażem."
   },
   {
@@ -278,7 +278,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "academic",
     title: "Promotor naukowy AI",
     description: "Pomaga wykryć luki badawcze (research gaps) i stawiać poprawnie pytania problemowe.",
-    prompt: "Jesteś promotorem akademickim. Pomagasz mi w przygotowaniu [artykułu/rozdziału]. Temat: [WPISZ]. Zadania: 1. Zaproponuj strukturę (Abstrakt-Wstęp-Metodologia-Wyniki), 2. Wskaż 5 luk badawczych (research gaps), 3. Zaproponuj pytania badawcze.",
+    prompt: "Jesteś promotorem akademickim. Pomagasz mi w przygotowaniu [rodzaj opracowania (np. artykuł/rozdział)]. Temat: [temat pracy]. Zadania: 1. Zaproponuj strukturę (Abstrakt-Wstęp-Metodologia-Wyniki), 2. Wskaż 5 luk badawczych (research gaps), 3. Zaproponuj pytania badawcze.",
     tip: "Świetny mechanizm obrony przed zbytnim ogólnikiem w pracy seminaryjnej."
   },
   {
@@ -286,7 +286,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "academic",
     title: "Trening i symulator obrony doktoratu",
     description: "Wciela się w niezwykle czepliwego recenzenta, odkrywając najsłabsze punkty tezy naukowej.",
-    prompt: "Zagraj rolę surowego recenzenta mojej rozprawy. Oto moja teza: [WKLEJ]. Zadaj mi 3 najtrudniejsze, podchwytliwe pytania metodologiczne i merytoryczne, jakie mogłyby paść podczas obrony. Nie oszczędzaj mnie.",
+    prompt: "Zagraj rolę surowego recenzenta mojej rozprawy. Oto moja teza: [teza rozprawy doktorskiej]. Zadaj mi 3 najtrudniejsze, podchwytliwe pytania metodologiczne i merytoryczne, jakie mogłyby paść podczas obrony. Nie oszczędzaj mnie.",
     tip: "Podstawowy krok w budowaniu odporności psychicznej i merytorycznej przed obroną pracy."
   },
 
@@ -296,7 +296,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "finance",
     title: "Audyt majątkowy w stylu Goldman Sachs",
     description: "Doskonały diagnoza aktywów, pasywów i długów z realną punktacją finansową.",
-    prompt: "Jesteś starszym doradcą ds. majątku. Chcę jasnego przeglądu moich finansów, który pokaże, na czym stoję i co naprawić najpierw. Przeanalizuj:\n- Majątek netto (tabela aktywów i długów)\n- Miesięczny przepływ pieniędzy (dochody vs wydatki)\n- Fundusz awaryjny (ile miesięcy przetrwania)\n- Przegląd zadłużenia (stopy procentowe i strategia spłaty)\n- Przegląd ubezpieczeń\n- Inwestycje (mieszanka portfela pod mój wiek i cele)\n- Gotowość emerytalna i podatki\n- Ogólna ocena finansowa (1-100) i top 3 akcje do podjęcia.\nMoje dane: [DODAJ WIEK, DOCHÓD, WYDATKI, DŁUGI, OSZCZĘDNOŚCI, INWESTYCJE, CELE]",
+    prompt: "Jesteś starszym doradcą ds. majątku. Chcę jasnego przeglądu moich finansów, który pokaże, na czym stoję i co naprawić najpierw. Przeanalizuj:\n- Majątek netto (tabela aktywów i długów)\n- Miesięczny przepływ pieniędzy (dochody vs wydatki)\n- Fundusz awaryjny (ile miesięcy przetrwania)\n- Przegląd zadłużenia (stopy procentowe i strategia spłaty)\n- Przegląd ubezpieczeń\n- Inwestycje (mieszanka portfela pod mój wiek i cele)\n- Gotowość emerytalna i podatki\n- Ogólna ocena finansowa (1-100) i top 3 akcje do podjęcia.\nMoje dane: [wiek, dochody, koszty i oszczędności]",
     tip: "Daje doskonały obiektywny obraz własnych finansów bez emocji."
   },
   {
@@ -304,7 +304,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "finance",
     title: "Ocena i dywersyfikacja portfela XTB",
     description: "Optymalizuje portfel inwestycyjny złożony z ETF oraz akcji dywidendowych.",
-    prompt: "Oceń mój portfel XTB. Skład: [LISTA]. Oceń dywersyfikację, potencjał wzrostu i dywidendowy. Uwzględnij sytuację rynkową. Stwórz tabelę z rekomendacjami inwestowania 1000 zł miesięcznie przez kolejne 6 miesięcy.",
+    prompt: "Oceń mój portfel XTB. Skład: [skład obecnego portfela (akcje i ETF)]. Oceń dywersyfikację, potencjał wzrostu i dywidendowy. Uwzględnij sytuację rynkową. Stwórz tabelę z rekomendacjami inwestowania 1000 zł miesięcznie przez kolejne 6 miesięcy.",
     tip: "Zapobiega przewartościowaniu jednego sektora w portfelu."
   },
   {
@@ -312,7 +312,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "finance",
     title: "Audyt podatkowy dla polskiego JDG",
     description: "Analizuje ryczałt vs podatek liniowy vs skalę podatkową i health-contributions chroniąc finanse.",
-    prompt: "Porównaj formy opodatkowania dla polskiego przedsiębiorcy. Dane: [Przychód, Koszty, Status ZUS/VAT]. Wylicz roczne obciążenie (Podatek + Zdrowotna) i wskaż najbardziej optymalne rozwiązanie.",
+    prompt: "Porównaj formy opodatkowania dla polskiego przedsiębiorcy. Dane: [przychód, koszty oraz status ZUS/VAT]. Wylicz roczne obciążenie (Podatek + Zdrowotna) i wskaż najbardziej optymalne rozwiązanie.",
     tip: "Pamiętaj o uwzględnieniu odliczeń ZUS przed wyborem formy opodatkowania."
   },
 
@@ -322,7 +322,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "security",
     title: "Geopolityczny przegląd przed podróżą",
     description: "Audyt obyczajów i bezpieczeństwa w docelowym kraju przed podróżami biznesowymi.",
-    prompt: "Jesteś doświadczonym doradcą z zakresu bezpieczeństwa podróży. Jadę do (NAZWA KRAJU) w terminie (DATA PODRÓŻY). Sporządź rozpoznanie sytuacji pod kątem obyczajowym i politycznym: \n1. Stosunek do Polaków (gov.pl).\n2. Powitania i zwroty grzecznościowe.\n3. Gesty zakazane i wskazane (palce, dłonie, głowa).\n4. Napiwki.\n5. Dress code (sakralne i publiczne).\n6. Święta narodowe i ograniczenia w terminie wyjazdu.\n7. Zagrożenia i przestępczość lokalna.\n8. Waluta, kurs i prawo wywozu gotówki.\n9. Dane najbliższej placówki dyplomatycznej (gov.pl).\nPodaj źródła każdej informacji.",
+    prompt: "Jesteś doświadczonym doradcą z zakresu bezpieczeństwa podróży. Jadę do [kraj docelowy] w terminie [termin podróży]. Sporządź rozpoznanie sytuacji pod kątem obyczajowym i politycznym: \n1. Stosunek do Polaków (gov.pl).\n2. Powitania i zwroty grzecznościowe.\n3. Gesty zakazane i wskazane (palce, dłonie, głowa).\n4. Napiwki.\n5. Dress code (sakralne i publiczne).\n6. Święta narodowe i ograniczenia w terminie wyjazdu.\n7. Zagrożenia i przestępczość lokalna.\n8. Waluta, kurs i prawo wywozu gotówki.\n9. Dane najbliższej placówki dyplomatycznej (gov.pl).\nPodaj źródła każdej informacji.",
     tip: "Chroni przed niezręcznymi gafami obyczajowymi i utratą reputacji."
   },
   {
@@ -330,7 +330,7 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     category: "security",
     title: "Analityk białego wywiadu (OSINT) dla agencji",
     description: "Szybka weryfikacja i ocena wiarygodności podejrzanych leadów rynkowych lub osób.",
-    prompt: "Jesteś ekspertem OSINT. Przeanalizuj wiadomość: [TREŚĆ]. Dokonaj analizy krytycznej (socjotechnika, manipulacja, red flagi). Wskaż bazy do sprawdzenia i oceń ryzyko interakcji.",
+    prompt: "Jesteś ekspertem OSINT. Przeanalizuj wiadomość: [treść podejrzanej wiadomości]. Dokonaj analizy krytycznej (socjotechnika, manipulacja, red flagi). Wskaż bazy do sprawdzenia i oceń ryzyko interakcji.",
     tip: "Działa ochronno na poufne dane firmowe – zawsze przeprowadzaj audyt nadawców przed podpisaniem umów."
   }
 ];
