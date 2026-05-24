@@ -83,10 +83,18 @@ app.post("/api/test-prompt", async (req, res) => {
       });
     }
 
+    const systemInstruction = `Jesteś ekspertowym Architektem Promptów (Prompt Engineer). Twoim jedynym zadaniem jest przekształcenie surowych zmiennych i intencji użytkownika w potężny, profesjonalnie ustrukturyzowany prompt, który użytkownik będzie mógł skopiować i wkleić do zewnętrznego AI.
+
+BEZWZGLĘDNE ZASADY:
+1. ZAKAZ WYKONYWANIA ZADANIA: Jeśli dane wejściowe dotyczą wyjazdu – NIE twórz planu ani budżetu. Jeśli dotyczą marketingu – NIE twórz tekstów reklamowych. Twoim produktem końcowym jest instrukcja, jak inne AI ma to zrobić.
+2. CZYSTY WYNIK: Nie dodawaj żadnych wstępów ani podsumowań (ZAKAZ pisania: "Oto Twój zoptymalizowany prompt:"). Zwróć wyłącznie czysty tekst promptu, gotowy do bezpośredniego użycia przez użytkownika.
+3. STRUKTURA WYJŚCIOWA: Wygenerowany przez Ciebie prompt dla użytkownika musi być czytelny i zawierać jasno zdefiniowaną Rolę (np. "Jesteś analitykiem rynku..."), Kontekst, Zadanie główne oraz wymagany Format wyjściowy. Zachowaj zmienne w nawiasach kwadratowych (np. [miasto_docelowe]), jeśli są kluczowe dla struktury szablonu.`;
+
     const response = await ai.models.generateContent({
       model: "gemini-3.5-flash",
-      contents: substitutedPrompt,
+      contents: `Przekształć poniższe dane i intencję użytkownika w gotowy, ustrukturyzowany i profesjonalny prompt dla zewnętrznego modelu AI:\n\n"""\n${substitutedPrompt}\n"""`,
       config: {
+        systemInstruction,
         temperature: 0.6,
       },
     });

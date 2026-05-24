@@ -281,7 +281,7 @@ export default function App() {
           timestamp: new Date().toLocaleTimeString("pl-PL")
         }
       }));
-      triggerToast("Odebrano odpowiedź AI! 🧠", "Konsola poprawnie przeprowadziła symulację zwrotną.");
+      triggerToast("Wygenerowano prompt AI! 🧠", "Konsola poprawnie utworzyła gotową instrukcję.");
     } catch (err: any) {
       setTestResults(prev => ({
         ...prev,
@@ -724,7 +724,7 @@ export default function App() {
                                   {testResults[prompt.id].loading ? (
                                     <div className="py-6 flex flex-col items-center justify-center space-y-2 text-indigo-500 font-semibold text-xs">
                                       <Loader2 className="w-6 h-6 animate-spin" />
-                                      <span>Symuluję odpowiedź asystenta w oparciu o dostarczone parametry...</span>
+                                      <span>Generuję zoptymalizowany, ustrukturyzowany prompt...</span>
                                     </div>
                                   ) : testResults[prompt.id].error ? (
                                     <div className="text-red-700 font-medium text-xs bg-red-50 p-3 rounded-lg border border-red-200">
@@ -740,13 +740,13 @@ export default function App() {
                                           onClick={() => {
                                             if (testResults[prompt.id].responseText) {
                                               navigator.clipboard.writeText(testResults[prompt.id].responseText || "");
-                                              triggerToast("Skopiowano odpowiedź AI!", "Generowana treść jest w schowku.");
+                                              triggerToast("Skopiowano prompt!", "Zoptymalizowany prompt został zapisany w schowku.");
                                             }
                                           }}
                                           className="text-[10px] font-bold bg-white border border-indigo-200 text-indigo-700 hover:bg-slate-50 px-3 py-1.5 rounded-lg transition-all cursor-pointer flex items-center gap-1"
                                         >
                                           <Copy className="w-3 h-3" />
-                                          Kopiuj Odpowiedź
+                                          Kopiuj Prompt
                                         </button>
                                       </div>
                                     </div>
