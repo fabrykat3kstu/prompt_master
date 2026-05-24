@@ -57,7 +57,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     id: "travel",
-    name: "Podróże i logistyka",
+    name: "Podróże",
     icon: "Palmtree",
     description: "Modułowe, kompaktowe plany wyjazdów biznesowych i turystycznych wraz z budżetami."
   }
@@ -332,5 +332,54 @@ export const INITIAL_PROMPTS: PromptItem[] = [
     description: "Szybka weryfikacja i ocena wiarygodności podejrzanych leadów rynkowych lub osób.",
     prompt: "Jesteś ekspertem OSINT. Przeanalizuj wiadomość: [treść podejrzanej wiadomości]. Dokonaj analizy krytycznej (socjotechnika, manipulacja, red flagi). Wskaż bazy do sprawdzenia i oceń ryzyko interakcji.",
     tip: "Działa ochronno na poufne dane firmowe – zawsze przeprowadzaj audyt nadawców przed podpisaniem umów."
+  },
+  // --- PODRÓŻE ---
+  {
+    id: "trv-adventure-1",
+    category: "travel",
+    title: "Wybierz własną przygodę w mieście",
+    description: "Modułowy plan dnia dopasowany do nastroju.",
+    prompt: "Zaplanuj wycieczkę po [miasto docelowe] na [liczba dni] dni. Dla każdej pory dnia przedstaw 3 opcje dopasowane do stylów: [preferowane style zwiedzania (np. historia/kulinaria)]. Podaj opis, czas i koszt ($).",
+    tip: "Łącz style, np. 'historia i lokalna kuchnia'."
+  },
+  {
+    id: "trv-mountain-1",
+    category: "travel",
+    title: "Górski plan awaryjny na złą pogodę",
+    description: "Alternatywne atrakcje, gdy nie można wyjść na szlak.",
+    prompt: "Stwórz plan awaryjny dla regionu [region górski]. Kategorie: 1. Pod dachem, 2. Kultura, 3. Smaki regionu, 4. Relaks. Podaj Pro-Tipy dla każdej atrakcji.",
+    tip: "Warto mieć ten plan zapisany przed wyjazdem w góry."
+  },
+  {
+    id: "trv-budget-1",
+    category: "travel",
+    title: "Oszacowanie budżetu turysty",
+    description: "Precyzyjna kalkulacja kosztów w lokalnej walucie.",
+    prompt: "Oszacuj budżet na podróż do [kierunek podróży] na [liczba dni] dni dla [liczba osób] osób. Stwórz tabelę: Kategoria, Koszt dzienny (lokalna waluta), Koszt całkowity (PLN). Podaj porady oszczędnościowe.",
+    tip: "Zawsze dodaj 15% rezerwy na nieprzewodziane wydatki."
+  },
+  {
+    id: "trv-plan-1",
+    category: "travel",
+    title: "Kompleksowy plan wakacji",
+    description: "Strategiczny i operacyjny plan wyjazdu dzień po dniu.",
+    prompt: "Przygotuj szczegółowy plan podróży. Miejsce docelowe: [kierunek podróży]. Termin: [daty wyjazdu]. Budżet: [szacowany budżet]. Styl podróżowania: [styl wyjazdu (np. aktywny/relaks)]. Uwzględnij: 1. Plan dzień po dniu, 2. Noclegi, 3. Transport, 4. Must see (główne atrakcje), 5. Gastronomię, 6. Checklistę praktyczną.",
+    tip: "Użyj tego do planowania swoich głównych zagranicznych wyjazdów."
+  },
+  {
+    id: "trv-citybreak-1",
+    category: "travel",
+    title: "Planowanie city breaku (szybki wypad)",
+    description: "Intensywny i logistycznie zoptymalizowany plan na weekendowy wyjazd do europejskiej stolicy.",
+    prompt: "Zaplanuj intensywny wyjazd typu City Break do miasta [miasto docelowe] na [liczba dni] dni. Skup się na maksymalnym wykorzystaniu czasu. Opracuj: 1. Logistykę dojazdu z lotniska, 2. Optymalną trasę zwiedzania dzielnica po dzielnicy, 3. Rekomendowane miejsca na szybki lunch i kolację z lokalną kuchnią, 4. Kartę komunikacji miejskiej, którą warto kupić. Unikaj turystycznych pułapek.",
+    tip: "Idealne narzędzie do planowania krótkich, 2-3 dniowych wypadów weekendowych."
+  },
+  {
+    id: "trv-packing-1",
+    category: "travel",
+    title: "Pakowanie i checklista przedwyjazdowa (Smart Packing)",
+    description: "Spersonalizowana checklista rzeczy do zabrania dopasowana do klimatu i aktywności.",
+    prompt: "Stwórz spersonalizowaną listę rzeczy do spakowania na wyjazd do [kierunek podróży] na [liczba dni] dni. Typ wyjazdu i główne aktywności: [aktywności i styl podróży (np. trekking/plaża)]. Uwzględnij: 1. Dokumenty i finanse, 2. Odzież dopasowaną do klimatu, 3. Apteczkę, 4. Elektronikę, 5. Kosmetyki, 6. Rzeczy specyficzne dla typu wyjazdu. Podaj wskazówki, jak spakować się tylko w bagaż podręczny.",
+    tip: "Pomoże Ci uniknąć stresu i zapomnienia o najważniejszych dokumentach lub lekach."
   }
 ];
