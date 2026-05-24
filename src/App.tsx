@@ -423,7 +423,7 @@ export default function App() {
               className={`w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-bold transition-all text-left ${activeTab === "explore" ? "sidebar-active-orange custom-shadow" : "text-slate-600 hover:bg-slate-50"}`}
             >
               <Sliders className="w-4 h-4 text-slate-500" />
-              <span>Kompletny katalog</span>
+              <span>Baza instrukcji podstawowych</span>
             </button>
 
             <button 
@@ -652,7 +652,6 @@ export default function App() {
                                     <Terminal className="w-4 h-4 text-slate-500" />
                                     <span>Podgląd skompilowanego promptu</span>
                                   </div>
-                                  <span className="text-[9px] text-slate-400 font-mono">STANDARYZACJA WYGŁADZONA</span>
                                 </div>
                                 <div className="bg-slate-900 border border-slate-800 rounded-[2rem] p-5 pt-12 relative shadow-inner overflow-hidden max-h-[250px] overflow-y-auto custom-scrollbar">
                                   
